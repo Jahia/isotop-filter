@@ -1,0 +1,11 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+
+[jnt:isotopEntry] > jnt:content, mix:title
+ - image (weakreference, picker[type='image']) < 'jmix:image'
+ - link (weakreference, picker[type='page']) < 'jnt:page'
+
+[jnt:isotopList] > jnt:contentList, jmix:basicContent orderable
+ + * (jnt:isotopEntry)
+
